@@ -51,7 +51,7 @@ export const NavigationBar = () => {
   const [open, setOpen] = useState(false);
   const { state, navigate } = useRouter();
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.down('sm'));
+  const matches = useMediaQuery(theme.breakpoints.down('md'));
   if (matches)
     return (
       <Stack
