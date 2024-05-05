@@ -13,9 +13,6 @@ export const Footer = () => {
           <FooterItem>Team</FooterItem>
         </List>
       </Stack>
-      <Typography variant="body2" fontWeight="400">
-        © 2024 Sav • Kolkata
-      </Typography>
     </Stack>
   );
 };

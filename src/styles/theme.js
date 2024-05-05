@@ -7,7 +7,7 @@ export const getDesignTokens = (mode) => {
       ...(mode === 'light'
         ? {
             primary: {
-              main: '#000000',
+              main: '#121212',
             },
             secondary: {
               main: '#ffffff',
@@ -18,7 +18,7 @@ export const getDesignTokens = (mode) => {
               main: '#ffffff',
             },
             secondary: {
-              main: '#000000',
+              main: '#121212',
             },
           }),
     },
