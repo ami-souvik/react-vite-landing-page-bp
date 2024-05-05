@@ -4,12 +4,10 @@ import { styled } from '@mui/material/styles';
 import reactLogo from '@assets/react.png';
 import viteLogo from '@assets/vite.png';
 
-const Image = styled('img')(({ theme }) => ({
-  width: '32px',
-  padding: '6px',
+const Image = styled('img')({
+  width: '24px',
   borderRadius: '4px',
-  backgroundColor: theme.palette.primary.main,
-}));
+});
 
 export const Title = () => {
   return (

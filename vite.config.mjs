@@ -15,11 +15,9 @@ export default defineConfig({
       '@assets': path.resolve(__dirname, './src/assets'),
       '@fonts': path.resolve(__dirname, './src/fonts'),
       '@context': path.resolve(__dirname, './src/context'),
+      '@config': path.resolve(__dirname, './src/config'),
       '@components': path.resolve(__dirname, './src/components'),
-      '@styles': path.resolve(__dirname, './src/styles'),
-
-      '@common': path.resolve(__dirname, './src/components/common-co'),
-      '@layout': path.resolve(__dirname, './src/components/layout-co')
+      '@styles': path.resolve(__dirname, './src/styles')
     }
   }
 })

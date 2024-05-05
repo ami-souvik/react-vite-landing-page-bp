@@ -1,5 +1,5 @@
 import { Stack, useMediaQuery, useTheme } from '@mui/material';
-import { NavigationBar, Title, ToggleMode } from '@components';
+import { Navigator, Title, ToggleMode } from '@components';
 
 export const Header = () => {
   const theme = useTheme();
@@ -9,7 +9,7 @@ export const Header = () => {
       <Stack p={mdw ? '6px 24px' : '12px 48px'} direction="row" justifyContent="space-between" alignItems="center">
         <Title />
         <Stack direction="row" spacing={2}>
-          <NavigationBar />
+          <Navigator />
           <ToggleMode />
         </Stack>
       </Stack>

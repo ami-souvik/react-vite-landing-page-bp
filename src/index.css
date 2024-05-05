@@ -1,10 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
-@font-face {
-  font-family: 'SignPainter';
-  src:
-    local('SignPainterHouseScript.ttf'),
-    url(./fonts/SignPainterHouseScript.ttf) format('truetype');
-}
 :root {
   /** Primary colors */
   --primary: #068da9;

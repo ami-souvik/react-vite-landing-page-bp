@@ -3,6 +3,7 @@ import { Box, Typography } from '@mui/material';
 import Link from '@mui/material/Link';
 import ListItem from '@mui/material/ListItem';
 import { styled } from '@mui/material/styles';
+import { Anchor } from '@components';
 
 const StyledLink = styled(Link)(({ disabled }) => ({
   userSelect: 'none',
@@ -24,11 +25,9 @@ export const FooterItem = ({ badge, heading, href, onClick, children }) => {
           <Box width="12px" />
         </>
       )}
-      <StyledLink disabled={heading} href={href} onClick={clickHandler}>
-        <Typography variant="body2" fontWeight={heading ? 600 : 400}>
-          {children}
-        </Typography>
-      </StyledLink>
+      <Anchor href={href} click={clickHandler}>
+        {children}
+      </Anchor>
     </ListItem>
   );
 };

@@ -8,11 +8,9 @@
       "@assets/*": ["./assets/*"],
       "@fonts/*": ["./fonts/*"],
       "@context": ["./context"],
+      "@config": ["./config"],
       "@components": ["./components"],
       "@styles": ["./styles"],
-
-      "@common/*": ["./components/common-co/*"],
-      "@layout/*": ["./components/layout-co/*"]
     }
   },
   "include": ["src"]
