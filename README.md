@@ -1,1 +1,1 @@
-# fe-react-vite-bp
+# Frontend React Vite Boilerplate
