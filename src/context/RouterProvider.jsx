@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import { Children, createContext, createElement, useContext, useEffect, useState } from 'react';
+import { Box, useMediaQuery } from '@mui/material';
 
 export const RouterContext = createContext({
   state: {
@@ -31,7 +32,7 @@ export const Routes = ({ children }) => {
   const matchRoute = (path) => {
     return path === window.location.pathname;
   };
-  React.Children.forEach(children, (element, index) => {
+  Children.forEach(children, (element, index) => {
     if (element?.props?.path && matchRoute(element.props.path)) {
       thisElement = element;
     }
@@ -42,9 +43,10 @@ export const Routes = ({ children }) => {
   return thisElement;
 };
 
-export const Route = ({ path, element }) => {
+export const Route = ({ path, component, componentProps }) => {
+  const mdw = useMediaQuery((theme) => theme.breakpoints.down('md'));
   if (path === window.location.pathname) {
-    return element;
+    return <Box m={mdw ? '6px 24px' : '12px 48px'}>{createElement(component, componentProps)}</Box>;
   }
   return <></>;
 };

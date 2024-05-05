@@ -15,10 +15,10 @@ function App() {
         <RouterProvider href="/">
           <Header />
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/blogs" element={<Blogs />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/blogs" component={Blogs} />
+            <Route path="/contact" component={Contact} />
           </Routes>
         </RouterProvider>
       </Background>

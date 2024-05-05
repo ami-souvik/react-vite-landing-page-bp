@@ -13,14 +13,11 @@ const Image = styled('img')(({ theme }) => ({
 
 export const Title = () => {
   return (
-    <Stack direction="row" alignItems="center" spacing={2}>
+    <Stack direction="row" alignItems="center" spacing={1}>
       <Typography variant="h4" lineHeight={0} fontWeight={700}>
         Generic
       </Typography>
       <Image src={reactLogo} />
-      <Typography variant="h4" lineHeight={0} fontWeight={700}>
-        +
-      </Typography>
       <Image src={viteLogo} />
     </Stack>
   );

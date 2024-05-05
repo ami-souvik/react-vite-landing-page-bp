@@ -1,8 +1,8 @@
+import { useState } from 'react';
 import { Stack, Typography, Link, Box, useMediaQuery, Drawer, IconButton } from '@mui/material';
 import { styled, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useRouter } from '@context';
-import { useState } from 'react';
 
 const urls = [
   {
@@ -48,11 +48,11 @@ const Key = ({ href, children }) => {
 const Seperator = () => <Box height="4px" width="4px" borderRadius="4px" bgcolor="text.primary" />;
 
 export const NavigationBar = () => {
-  const [open, setOpen] = useState(false);
-  const { state, navigate } = useRouter();
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.down('md'));
-  if (matches)
+  const [open, setOpen] = useState(false);
+  const { state } = useRouter();
+  const mdw = useMediaQuery((theme) => theme.breakpoints.down('md'));
+  if (mdw)
     return (
       <Stack
         direction="row"
@@ -62,6 +62,7 @@ export const NavigationBar = () => {
         bottom="0px"
         width="100%"
         height="48px"
+        p="6px 24px"
         zIndex={99}
         boxShadow={`0px 1px 12px 2px ${theme.palette.primary.main}22`}
         bgcolor="secondary.main"
