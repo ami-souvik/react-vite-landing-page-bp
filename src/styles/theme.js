@@ -1,5 +1,7 @@
 import { createTheme, responsiveFontSizes } from '@mui/material';
 
+// https://mui.com/material-ui/customization/default-theme/
+// yellow shade #F7B538, #FAC748
 export const getDesignTokens = (mode) => {
   const theme = createTheme({
     palette: {
@@ -7,15 +9,15 @@ export const getDesignTokens = (mode) => {
       ...(mode === 'light'
         ? {
             primary: {
-              main: '#121212',
+              main: '#FAC748',
             },
             secondary: {
               main: '#ffffff',
-            },
+            }
           }
         : {
             primary: {
-              main: '#ffffff',
+              main: '#FAC748',
             },
             secondary: {
               main: '#121212',

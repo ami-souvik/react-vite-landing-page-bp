@@ -20,7 +20,7 @@ export const Badge = ({ id, label, icon }) => {
       height={160}
       p={1}
       borderRadius="50%"
-      border={`2px solid ${theme.palette.primary.main}`}
+      border={`2px solid ${theme.palette.text.primary}`}
       sx={{
         animation: `${spin} 10s linear infinite`,
       }}
@@ -38,7 +38,7 @@ export const Badge = ({ id, label, icon }) => {
             40,40 0 1,1 -80,0"
           fill="transparent"
         ></path>
-        <text style={{ fill: theme.palette.primary.main }}>
+        <text style={{ fill: theme.palette.text.primary }}>
           <textPath href={`#${badgePathId}`}>{label}</textPath>
         </text>
       </svg>

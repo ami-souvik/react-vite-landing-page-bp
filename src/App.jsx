@@ -4,6 +4,7 @@ import { getDesignTokens } from '@styles';
 import { Route, RouterProvider, Routes, useApp } from '@context';
 import { Home, About, Blogs, Contact } from '@screens';
 import { Background, Footer, Header } from '@components';
+import '@translations';
 
 function App() {
   const { mode } = useApp();

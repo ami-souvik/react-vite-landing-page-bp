@@ -17,6 +17,8 @@ export default defineConfig({
       '@context': path.resolve(__dirname, './src/context'),
       '@config': path.resolve(__dirname, './src/config'),
       '@components': path.resolve(__dirname, './src/components'),
+      '@mui-w-form': path.resolve(__dirname, './src/mui-w-form'),
+      '@translations': path.resolve(__dirname, './src/translations'),
       '@styles': path.resolve(__dirname, './src/styles')
     }
   }

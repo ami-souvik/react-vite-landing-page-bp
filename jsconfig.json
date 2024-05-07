@@ -10,6 +10,8 @@
       "@context": ["./context"],
       "@config": ["./config"],
       "@components": ["./components"],
+      "@mui-w-form": ["./mui-w-form"],
+      "@translations": ["./translations"],
       "@styles": ["./styles"],
     }
   },

@@ -1,10 +1,11 @@
 import { Typography, Link } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
-const StyledAction = styled(Link)(({ disabled }) => ({
+const StyledAction = styled(Link)(({ theme, disabled }) => ({
   textDecoration: 'none',
   userSelect: 'none',
   pointerEvents: disabled ? 'none' : 'auto',
+  color: theme.palette.text.primary,
 }));
 
 export const Anchor = ({ active, href, click, actionSx, children }) => {

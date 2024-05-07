@@ -1,8 +1,9 @@
 import React from 'react';
-import { List, Stack, useMediaQuery } from '@mui/material';
-import { FooterItem } from '@components';
+import { useTranslation } from 'react-i18next';
+import { List, ListItem, Stack, Typography, useMediaQuery } from '@mui/material';
 
 export const Footer = () => {
+  const { t } = useTranslation();
   const mdw = useMediaQuery((theme) => theme.breakpoints.down('md'));
   return (
     <Stack
@@ -13,10 +14,12 @@ export const Footer = () => {
     >
       <Stack direction="row">
         <List>
-          <FooterItem heading>Support</FooterItem>
-          <FooterItem>Help Center</FooterItem>
-          <FooterItem>Contact Us</FooterItem>
-          <FooterItem>Team</FooterItem>
+          <ListItem>
+            <Typography fontWeight={600}>{t('footer.support')}</Typography>
+          </ListItem>
+          <ListItem>{t('footer.helpCenter')}</ListItem>
+          <ListItem>{t('footer.contactUs')}</ListItem>
+          <ListItem>{t('footer.team')}</ListItem>
         </List>
       </Stack>
     </Stack>

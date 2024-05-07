@@ -12,7 +12,7 @@ const Image = styled('img')({
 export const Title = () => {
   return (
     <Stack direction="row" alignItems="center" spacing={1}>
-      <Typography variant="h4" lineHeight={0} fontWeight={700}>
+      <Typography variant="h4" fontWeight={700}>
         Generic
       </Typography>
       <Image src={reactLogo} />

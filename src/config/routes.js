@@ -1,18 +1,18 @@
 export const routes = [
 	{
 		href: '/',
-		label: 'Home',
+		label: 'navigation.home',
 	},
 	{
 		href: '/about',
-		label: 'About',
+		label: 'navigation.about',
 	},
 	{
 		href: '/blogs',
-		label: 'Blogs',
+		label: 'navigation.blogs',
 	},
 	{
 		href: '/contact',
-		label: 'Contact',
+		label: 'navigation.contact',
 	},
 ];

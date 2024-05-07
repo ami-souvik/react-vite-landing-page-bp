@@ -1,4 +1,4 @@
-import { Box, Stack, Switch, colors, keyframes, styled, useTheme } from '@mui/material';
+import { Switch, styled, useTheme } from '@mui/material';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { useApp } from '@context';
@@ -20,12 +20,12 @@ const Toggle = styled(Switch)(({ theme }) => ({
       transform: 'translateX(16px)',
       '& + .MuiSwitch-track': {
         opacity: 1,
-        backgroundColor: theme.palette.primary.main,
+        backgroundColor: theme.palette.text.primary,
       },
     },
   },
   '& .MuiSwitch-thumb': {
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: theme.palette.text.primary,
     width: 24,
     height: 24,
     '&::before': {
@@ -39,41 +39,19 @@ const Toggle = styled(Switch)(({ theme }) => ({
   },
   '& .MuiSwitch-track': {
     opacity: 1,
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: theme.palette.text.primary,
     borderRadius: 20,
   },
 }));
 
 export const ToggleMode = () => {
   const theme = useTheme();
-  const { mode, toggleMode } = useApp();
+  const { toggleMode } = useApp();
   return (
     <Toggle
       onClick={toggleMode}
       checkedIcon={<LightModeIcon />}
       icon={<DarkModeIcon htmlColor={theme.palette.secondary.main} />}
     />
-    // <Stack
-    //   width="40px"
-    //   padding="2px"
-    //   direction="row"
-    //   borderRadius="50px"
-    //   bgcolor="primary.main"
-    //   alignItems="center"
-    //   onClick={toggleMode}
-    //   sx={{ cursor: 'pointer' }}
-    // >
-    //   <Box fontSize="1rem" lineHeight={0}>
-    //     {mode == 'light' ? (
-    //       <Lever sx={{ animation: `${left} 0.2s linear forwards` }}>
-    //         <LightModeIcon fontSize="inherit" htmlColor={theme.palette.secondary.main} />
-    //       </Lever>
-    //     ) : (
-    //       <Lever sx={{ animation: `${right} 0.2s linear forwards` }}>
-    //         <DarkModeIcon fontSize="inherit" htmlColor={theme.palette.secondary.main} />
-    //       </Lever>
-    //     )}
-    //   </Box>
-    // </Stack>
   );
 };
